@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function yueshu(x){
+				var sum = 0;
+				for(i=0;i<x;i++){
+					if(x%i === 0){
+						sum = sum +i;
+					}
+				}return sum;
+			}
+			for(i=0;i<3000;i++){
+				if(yueshu(i)===yueshu(yueshu(i))){
+					console.log(i);
+					console.log(yueshu(i));
+				}
+			}
+		</script>
+	</body>
+</html>
