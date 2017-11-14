@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var input = prompt();
+			var reg = new RegExp("[0-9a-zA-z_\\u4E00-\\u9FFF]{6,8}","g");
+			if(reg.test(input)){
+				alert("合格");
+			}else{
+				alert("不合格");
+			}
+		</script>
+	</body>
+</html>
