@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div onmousemove="inhere()" onmouseout="outhere()">
+			二十天内免费登录
+		</div>
+		<script>
+			var oDiv = document.querySelector("div");
+			oDiv.style.cssText = "width: 100px; " +
+				"height: 100px; " +
+				"background-color: rgb(18, 52, 86); " +
+				"border: 3px solid rgb(171, 205, 239); "
+				;
+			function inhere(){
+				oDiv.style.cssText =
+				"width: 100px; " +
+				"height: 100px; " +
+				"background-color: rgb(18, 52, 86); " +
+				"border: 3px solid yellow; ";
+			}
+			function outhere(){
+				oDiv.style.cssText =
+				"width: 100px; " +
+				"height: 100px; " +
+				"background-color: rgb(18, 52, 86); " +
+				"border: 3px solid rgb(171, 205, 239); ";
+			}
+		</script>
+	</body>
+
+</html>

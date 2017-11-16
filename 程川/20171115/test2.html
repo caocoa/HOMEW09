@@ -10,14 +10,14 @@
 		<p>随便输点什么</p>
 		<script>
 			var oP = document.querySelector("p");
-			var oBig =document.getElementsByClassName("big");
-			var oSmall =document.getElementsByClassName("small");
+			var oBig =document.querySelector(".big");
+			var oSmall =document.querySelector(".small");
 			
             oBig.onclick = function () {
-                oP.style.fontSize = "50px";
+                oP.style.fontSize = "larger";
             }
             oSmall.onclick = function () {
-                oP.style.fontSize = "10px";
+                oP.style.fontSize = "smaller";
             }
         
 		</script>
