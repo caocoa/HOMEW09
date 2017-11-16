@@ -20,51 +20,36 @@
 		var oButtons = document.querySelectorAll("button");
 		var bagcoc = document.body;
 
-		var vvr = document.querySelector("value");
-
-		var valu1 = 100;
-		var valu2 = 100;
-		var valu3 = 100;
-		bagcoc.style.backgroundColor = "rgb(" + valu1 + "," + valu2 + "," + valu3 + ")";
+		bagcoc.style.backgroundColor = "rgb(" + oInput[0].value + "," + oInput[1].value + "," + oInput[2].value + ")";
 		oButtons[0].onclick = function() {
-			if(valu1 < 0 && valu1 > 255) {
-				alert("越界");
-			} else {
-				valu1 -= 1;
-				oInput[0].value = valu1;
-				bagcoc.style.backgroundColor = "rgb(" + valu1 + "," + valu2 + "," + valu3 + ")";
-			}
+			oInput[0].value--;
+			bagcoc.style.backgroundColor = "rgb(" + oInput[0].value + "," + oInput[1].value + "," + oInput[2].value + ")";
 		};
 		oButtons[1].onclick = function() {
-			valu1 += 1;
-			oInput[0].value = valu1;
-			bagcoc.style.backgroundColor = "rgb(" + valu1 + "," + valu2 + "," + valu3 + ")";
+			oInput[0].value++;
+			bagcoc.style.backgroundColor = "rgb(" + oInput[0].value + "," + oInput[1].value + "," + oInput[2].value + ")";
 		};
 
 		oButtons[2].onclick = function() {
-			valu2 -= 1;
-			oInput[1].value = valu2;
-			bagcoc.style.backgroundColor = "rgb(" + valu1 + "," + valu2 + "," + valu3 + ")";
+			oInput[1].value--;
+			bagcoc.style.backgroundColor = "rgb(" + oInput[0].value + "," + oInput[1].value + "," + oInput[2].value + ")";
 		};
 		oButtons[3].onclick = function() {
-			valu2 += 1;
-			oInput[1].value = valu2;
-			bagcoc.style.backgroundColor = "rgb(" + valu1 + "," + valu2 + "," + valu3 + ")";
+			oInput[1].value++;
+			bagcoc.style.backgroundColor = "rgb(" + oInput[0].value + "," + oInput[1].value + "," + oInput[2].value + ")";
 		};
 
 		oButtons[4].onclick = function() {
-			valu3 -= 1;
-			oInput[2].value = valu3;
-			bagcoc.style.backgroundColor = "rgb(" + valu1 + "," + valu2 + "," + valu3 + ")";
+			oInput[2].value--;
+			bagcoc.style.backgroundColor = "rgb(" + oInput[0].value + "," + oInput[1].value + "," + oInput[2].value + ")";
 		};
 		oButtons[5].onclick = function() {
-			valu3 += 1;
-			oInput[2].value = valu3;
-			bagcoc.style.backgroundColor = "rgb(" + valu1 + "," + valu2 + "," + valu3 + ")";
+			oInput[2].value++;
+			bagcoc.style.backgroundColor = "rgb(" + oInput[0].value + "," + oInput[1].value + "," + oInput[2].value + ")";
 		};
-		oButtons[5].onclick = function() {
+		oButtons[6].onclick = function() {
+			bagcoc.style.backgroundColor = "rgb(" + oInput[0].value + "," + oInput[1].value + "," + oInput[2].value + ")";
 
-			bagcoc.style.backgroundColor = "rgb(" + vvr[0] + "," + vvr[1] + "," + vvr[2] + ")";
 		};
 	</script>
 
