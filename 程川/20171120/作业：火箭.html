@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section {
+				position: relative;
+				padding-top: 450px;
+			}
+			
+			div {
+				width: 50px;
+				height: 50px;
+				margin-left: 300px;
+				background: url(img/火箭.jpg) no-repeat;
+				background-size: 50px 50px;
+			}
+			
+			button {
+				width: 40px;
+				height: 40px;
+				background-color: #fff;
+				color: #ccc;
+				margin-left: 300px;
+				margin-top: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<div></div>
+
+		</section>
+		<button>点火</button>
+		<script>
+			var oDiv = document.querySelector("section");
+			var oBtn = document.querySelector("button");
+			var delayTime = 1000;
+			var topNum = 450;
+			var witNum = 50;
+			oBtn.onclick = function() {
+				var timer1 = setTimeout(function() {
+					var timer = setInterval(function() {
+						topNum -= 5;
+						if(topNum <= 10) {
+							clearInterval(timer);
+						}
+						oDiv.style.paddingTop = topNum + "px";
+					}, 100);
+				}, 1000);
+				
+			};
+		</script>
+
+	</body>
+
+</html>
