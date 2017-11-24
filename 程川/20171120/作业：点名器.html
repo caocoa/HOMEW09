@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>简易点名器</title>
+		<style>
+			section {
+				margin: auto;
+				width: 400px;
+				height: auto;
+				background: url(img/点名.jpg) no-repeat;
+			}
+			
+			div {
+				width: 50px;
+				height: 50px;
+				padding: 10px;
+				text-align: center;
+				margin: auto;
+			}
+			
+			button {
+				width: 40px;
+				height: 40px;
+				padding: 5px 10px;
+				border-radius: 10px;
+				border: none;
+				outline: none;
+				background-color: #fff;
+				color: #ccc;
+				margin: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<div>点名</div>
+			<button>开始</button>
+		</section>
+
+		<script>
+			var oDiv = document.querySelector('div');
+			var oBtn = document.querySelector('button');
+			var names = [
+				'柏小田', '刘前', '柳巍新', '彭鑫垚', '郑轲', '黄彬',
+				'黄瑶', '李明', '李洲', '廖立', '刘晶', '罗浩', '潘缘根',
+				'谭彪', '王晓欢', '肖映玲', '朱想', '卓磊', '邹虹',
+				'陈翀', '赵达', '张磊', '张丽竹', '程川'
+			];
+			var oIndex;
+			var speedTime = 10;
+			var totalTime = 3000;
+			oBtn.onclick = function() {
+				var times = 0;
+				var timer = setInterval(function() {
+					times++;
+					if(times >= totalTime / speedTime) {
+						clearInterval(timer);
+					}
+					oIndex = parseInt(Math.random() * (names.length - 1 - 0 + 1)) + 0;
+					oDiv.innerHTML = names[oIndex];
+				}, speedTime);
+			};
+		</script>
+	</body>
+
+</html>
